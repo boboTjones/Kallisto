@@ -1,11 +1,11 @@
 require 'polyglot'
 require 'treetop'
-require "#{Dir.pwd}/log_parser_extensions.rb"
+require "#{File.expand_path(File.dirname(__FILE__))}/log_parser_extensions.rb"
 
 class LogParser
   
   def initialize(data)
-    Treetop.load("#{Dir.pwd}/log_line.treetop")
+    Treetop.load("#{File.expand_path(File.dirname(__FILE__))}/log_line.treetop")
     @parser = LogLineParser.new
     @data = data
   end
@@ -24,6 +24,7 @@ class LogParser
   
   
   def to_html
+    html = []
     @data.split("\n").each do |d|
       html << parse(d)
     end

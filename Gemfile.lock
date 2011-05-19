@@ -92,7 +92,9 @@ DEPENDENCIES
   em-redis
   eventmachine
   haml
+  polyglot
   rails (= 3.0.5)
   redis
   resque
   sqlite3
+  treetop

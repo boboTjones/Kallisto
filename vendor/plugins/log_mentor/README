@@ -1,13 +1,30 @@
 LogMentor
 =========
 
-Introduction goes here.
+LogMentor is the guts of Kallisto. It does all the handling of reading 
+logs, parsing them into HTML. Since this was originally written under 
+OS X, it includes a listener for Darwin's unfriendly syslog(1). 
 
+LogMentor is still pretty crude as of 5/19/2011. There's a lot I want to 
+do with it, such as:
+
+1. Make sure it runs under UNIX that is not Darwin.
+2. Find logs that are being updated at intervals of /t/ and provide them 
+   as an attr_reader for display in the UI.
+3. And a bunch of other things that are crowding each other out of my brain 
+   right now.
 
 Example
 =======
 
-Example goes here.
+lm = LogMentor.new 
+lm.poll
 
 
-Copyright (c) 2011 [name of plugin creator], released under the MIT license
+ToDo
+=======
+
+1. Get HTMLized lines to UI.
+
+=======
+Copyright (c) 2011 Erin Lin Ptacek, released under the MIT license

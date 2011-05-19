@@ -79,7 +79,7 @@ class LogMentor
   end
   
   def prettylines(log="syslog")
-    data = LogLineParse.new poll(log)
+    data = LogParser.new poll(log)
     data.to_html
   end
   

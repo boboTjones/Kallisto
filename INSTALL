@@ -2,7 +2,9 @@
 
 Gee, that's an excellent question. Try this:
 
-1. bundle install
-2. rails server
-3. Point your favorite browser at http://0.0.0.0:3000/logs
+1. Start redis, wherever you keep it.
+2. cd /path/to/kallisto
+3. bundle install
+4. rails server
+5. If that doesn't blow up, point your favorite browser at http://0.0.0.0:3000/logs
 
