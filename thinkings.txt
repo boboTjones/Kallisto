@@ -1,9 +1,0 @@
-task:
-
-take data from EM listener and put it someplace where the UI can poll for it to refresh
-
-options:
-
-1. put it into redis? 
-
-cons... 
