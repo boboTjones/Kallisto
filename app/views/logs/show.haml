@@ -1,0 +1,14 @@
+.span-24.searchbar.last
+  %form{:method => "POST", :action => "/logs/search"}
+    %input.text{:type => "text", :value => "search for..."}
+    %input{:type => "submit", :value => "search" }
+    
+.span-24.navbar.last
+  =render :partial => "logs/navbar"
+.clear
+
+.span-24.logdata.last
+  - @data.each do |d|
+    .span-22.logline.last
+      =d
+      %br

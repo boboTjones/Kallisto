@@ -1,0 +1,8 @@
+= How do I get Kallisto running?
+
+Gee, that's an excellent question. Try this:
+
+1. bundle install
+2. rails server
+3. Point your favorite browser at http://0.0.0.0:3000/logs
+

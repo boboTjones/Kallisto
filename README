@@ -1,0 +1,9 @@
+= This is Kallisto.
+
+What does it do? Right now, it listens to syslog(1) under OS X and allows you to view
+the log information in a web UI. 
+
+And that's about it. Kallisto has a long way to go before it's really usable. But you
+are welcome to play with it, should you be so inclined.
+
+Thank you and have a nice day!

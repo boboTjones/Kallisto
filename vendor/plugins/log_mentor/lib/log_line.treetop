@@ -1,0 +1,55 @@
+grammar LogLine
+
+    rule line
+      (timestamp space hostname space process_name space message) <Line>
+    end
+
+    rule timestamp
+      (day? space? month space number space time)* <TimeStamp>
+    end
+    
+    rule month
+      "Jan" / "Feb" / "Mar" / "Apr" /
+      "May" / "Jun" / "Jul" / "Aug" /
+      "Sep" / "Oct" / "Nov" / "Dec" 
+    end
+
+    rule day
+      "Sun" / "Mon" / "Tue" / "Wed" / "Thu" / "Fri" / "Sat" 
+    end
+    
+    rule time
+      [0-9]+ ':' [0-9]+ ':' [0-9]+ 
+    end
+
+    rule number
+      [0-9]+
+    end
+
+    rule hostname
+      [a-zA-Z]* <Hostname>
+    end
+    
+    rule process_name
+      (daemon? application_identifier? pid)* <Process>
+    end
+    rule application_identifier
+      '.' [a-zA-Z]+ '.' [a-zA-Z]+ '.' [a-zA-Z]+ 
+    end
+
+    rule daemon
+      [a-zA-Z]+
+    end
+    
+    rule pid
+      '[' [0-9]+ ']'
+    end
+    
+    rule message
+      (.)* <Message>
+    end
+
+    rule space
+      [\s]+
+    end
+end

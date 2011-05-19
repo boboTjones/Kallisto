@@ -1,0 +1,109 @@
+/* line 1, ../../app/stylesheets/kallisto.sass */
+body {
+  background-color: white;
+  background-image: url("/images/banner.png");
+  background-repeat: repeat-x;
+}
+
+/* line 6, ../../app/stylesheets/kallisto.sass */
+.banner {
+  height: 90px;
+}
+
+/* line 9, ../../app/stylesheets/kallisto.sass */
+.showgrid {
+  background-image: url("/images/grid.png");
+}
+
+/* line 13, ../../app/stylesheets/kallisto.sass */
+.main {
+  padding: 1em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66em;
+  max-width: 100%;
+}
+
+/* line 21, ../../app/stylesheets/kallisto.sass */
+.searchbar {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+/* line 25, ../../app/stylesheets/kallisto.sass */
+.logdata {
+  padding: 4px;
+  background-color: #c6e6f4;
+}
+
+/* line 29, ../../app/stylesheets/kallisto.sass */
+.logo {
+  padding: 10px;
+}
+
+/* line 32, ../../app/stylesheets/kallisto.sass */
+input[type='text'] {
+  color: #999999;
+  padding: 2px;
+}
+
+/* line 36, ../../app/stylesheets/kallisto.sass */
+input[type='submit'] {
+  color: #aaaaaa;
+  background-color: white;
+}
+
+/* line 40, ../../app/stylesheets/kallisto.sass */
+input[type='submit']:hover {
+  color: #c6e6f4;
+  background-color: #eeeeee;
+}
+
+/* line 45, ../../app/stylesheets/kallisto.sass */
+.nav ul {
+  margin: 0;
+  margin-top: 1.4em;
+  list-style-type: none;
+}
+/* line 49, ../../app/stylesheets/kallisto.sass */
+.nav li {
+  display: inline;
+  float: left;
+  margin: 0 2px 0 0;
+  height: 29px;
+  min-width: 80px;
+  text-align: center;
+  background-color: white;
+}
+/* line 57, ../../app/stylesheets/kallisto.sass */
+.nav li a {
+  text-decoration: none;
+  color: #c6e6f4;
+  display: block;
+  margin: 5px;
+}
+/* line 62, ../../app/stylesheets/kallisto.sass */
+.nav li.active {
+  background-color: #c6e6f4;
+  color: #aaaaaa;
+}
+/* line 65, ../../app/stylesheets/kallisto.sass */
+.nav li.active a {
+  color: #aaaaaa;
+}
+
+/* line 68, ../../app/stylesheets/kallisto.sass */
+.clear {
+  clear: both;
+}
+
+/* line 71, ../../app/stylesheets/kallisto.sass */
+.logline {
+  margin: 2px;
+}
+
+/* line 74, ../../app/stylesheets/kallisto.sass */
+.logline:hover {
+  background-color: white;
+}
