@@ -2,34 +2,36 @@ module LogLine
   
   class Message < Treetop::Runtime::SyntaxNode
     def to_html
-      "<span class='message'>" + text_value + "</span>"
+      "<span class='message'>" + text_value.to_s + "</span>"
     end
   end
   
   class Hostname < Treetop::Runtime::SyntaxNode
     def to_html
-      host = text_value
+      host = text_value.to_s
       str = "<span class='hostname #{host}'>" + host + "</span>"
     end
   end
   
   class TimeStamp < Treetop::Runtime::SyntaxNode
     def to_html
-      id = DateTime._parse(text_value).values.join
-      str = "<div id='#{id}' class='log_line #{id}'>" + self.text_value + "</div>"
+      id = DateTime._parse(text_value.to_s).values.join
+      str = "<div id='#{id}' class='logline'>" + self.text_value.to_s
       return str
     end
   end
 
   class Process < Treetop::Runtime::SyntaxNode
     def to_html
-      "<span class='process'>" + text_value + "</span>"
+      "<span class='process'>" + text_value.to_s + "</span>"
     end
   end
   
   class Message
     def to_html
-      "<span class='message'" + text_value + "</span>"
+      ## XXX ToDo: stripping out <> for now.
+      message = text_value.to_s.gsub(/[<>]/,"")
+      "<span class='message'>" + message + "</span></div>"
     end
   end
   

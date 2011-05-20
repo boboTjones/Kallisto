@@ -22,31 +22,48 @@ grammar LogLine
       [0-9]+ ':' [0-9]+ ':' [0-9]+ 
     end
 
-    rule number
-      [0-9]+
-    end
-
     rule hostname
       [a-zA-Z]* <Hostname>
     end
     
     rule process_name
-      (daemon? application_identifier? pid)* <Process>
+      (application_identifier? daemon? pid)* <Process>
     end
+    
     rule application_identifier
-      '.' [a-zA-Z]+ '.' [a-zA-Z]+ '.' [a-zA-Z]+ 
+     (mystery_info? word dot word dot word)
+    end
+    
+    rule mystery_info
+      '[0x0-0x' [a-f0-9]+ '].'
     end
 
     rule daemon
-      [a-zA-Z]+
+      word [\-\/]? word?
     end
     
     rule pid
-      '[' [0-9]+ ']'
+      '[' number ']' colon?
     end
     
     rule message
       (.)* <Message>
+    end
+    
+    rule word
+      [a-zA-Z]+
+    end
+    
+    rule number
+      [0-9]+
+    end
+
+    rule colon
+      ':'
+    end
+    
+    rule dot
+      [\.]+
     end
 
     rule space
