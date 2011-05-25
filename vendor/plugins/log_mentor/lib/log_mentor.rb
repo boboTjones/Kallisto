@@ -60,7 +60,7 @@ class LogMentor
   end
   
   def poll(log="syslog")
-    if log == "syslog"
+    if (@base_os == "Darwin" && log == "syslog")
       r = Redis.new
       r.lrange(log,-40,-1)
     else
