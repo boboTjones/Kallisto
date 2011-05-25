@@ -1,3 +1,15 @@
+=begin
+File: darwin_syslog_listener.rb
+
+Description: A listener for Darwin's syslog(1) command. Takes syslog output and 
+stores it in redis.
+
+Copyright (c) 2011 by Erin Lin Ptacek
+NOTICE: This code be the property of Erin Lin Ptacek. This code is free to be used,
+redistributed, modified, copied or worshipped. Use this code at your own risk. 
+
+=end
+
 class DarwinSyslogListener
   def initialize
   end

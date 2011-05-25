@@ -6,4 +6,9 @@ the log information in a web UI.
 And that's about it. Kallisto has a long way to go before it's really usable. But you
 are welcome to play with it, should you be so inclined.
 
+= LogMentor
+
+All of the guts of Kallisto is in a plugin called LogMentor under 
+vendor/plugins/log_mentor.
+
 Thank you and have a nice day!

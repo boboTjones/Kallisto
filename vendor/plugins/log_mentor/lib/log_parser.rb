@@ -1,3 +1,19 @@
+=begin
+File: log_parser.rb
+
+Description: Code that calls the parser and returns 'HTMLized' lines. Parser
+was created using Treetop (http://treetop.rubyforge.org/). 
+
+Credits: Many thanks to Aaron Gough for his post that can be found here:
+
+http://thingsaaronmade.com/blog/a-quick-intro-to-writing-a-parser-using-treetop.html
+
+Copyright (c) 2011 by Erin Lin Ptacek
+NOTICE: This code be the property of Erin Lin Ptacek. This code is free to be used,
+redistributed, modified, copied or worshipped. Use this code at your own risk. 
+
+=end
+
 require 'polyglot'
 require 'treetop'
 require "#{File.expand_path(File.dirname(__FILE__))}/log_parser_extensions.rb"

@@ -5,26 +5,28 @@ LogMentor is the guts of Kallisto. It does all the handling of reading
 logs, parsing them into HTML. Since this was originally written under 
 OS X, it includes a listener for Darwin's unfriendly syslog(1). 
 
-LogMentor is still pretty crude as of 5/19/2011. There's a lot I want to 
-do with it, such as:
+LogMentor is still pretty crude as of 5/19/2011. 
 
-1. Make sure it runs under UNIX that is not Darwin.
-2. Find logs that are being updated at intervals of /t/ and provide them 
-   as an attr_reader for display in the UI.
-3. And a bunch of other things that are crowding each other out of my brain 
-   right now.
 
 Example
 =======
 
-lm = LogMentor.new 
-lm.poll
-
+>> lm = LogMentor.new `uname`.strip!
+>> lm.poll "ftp.log"
 
 ToDo
 =======
 
-1. Get HTMLized lines to UI.
-
+1. Currently requires a yaml configuration file in $RAILS_ROOT/config. It
+   might be nicer to have the plugin be more independent in that it could
+   figure out where the log files are by the operating system.
+2. Following from that find logs that are being updated at intervals of /t/ 
+   and provide them as an attr_reader for display in the UI.
+3. User-specified log files.
+4. All log data goes into redis store?
+5. Make sure it runs under UNIX that is not Darwin.
+6. And a bunch of other things that are crowding each other out of my brain 
+   right now.
+   
 =======
 Copyright (c) 2011 Erin Lin Ptacek, released under the MIT license

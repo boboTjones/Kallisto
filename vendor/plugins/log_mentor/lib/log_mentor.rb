@@ -1,13 +1,13 @@
-# This is where the basic stuff will go for now.
-# Check OS type, find logs based on OS, return raw or prettified lines.
-# Some thoughts:
-# Paths to logs cannot be specified by the user (directory traversal)
-# Prettified lines should contain DOM-style identifiers that can be used with jquery for highlighting and filtering.
-# eg, the hostname in a log is its own id or class.
-# Get log file names once and store them in a config file in the base path
-#
-# Which is better? Create a global instance of LogMentor from inside the rails app and use that to poll?
-# Or make the methods of LogMentor callable on the object?
+=begin
+File: log_mentor.rb
+
+Description: A plugin that handles the gathering and parsing of log data. 
+
+Copyright (c) 2011 by Erin Lin Ptacek
+NOTICE: This code be the property of Erin Lin Ptacek. This code is free to be used,
+redistributed, modified, copied or worshipped. Use this code at your own risk. 
+
+=end
 
 require 'darwin_syslog_listener'
 require 'file_tail'
