@@ -42,7 +42,7 @@ class LogParser
   def to_html
     html = []
     if @data.empty?
-      raise Exception, "No text was provided to parse."
+      return "Log file was empty."
     end
     @data.each do |d|
       html << parse(d)

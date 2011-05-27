@@ -1,6 +1,5 @@
 ---
 /var/log:
-- lf.log
 - syslog
 - auth.log
 - mail.log
