@@ -6,7 +6,6 @@ class LogsController < ApplicationController
 
   def show
     @active = (params[:id] || "syslog")
-    puts @active
     lm = LogMentor.new Kallisto::BASEOS
     @data = lm.prettylines @active.gsub("_",".")
     render :action => 'show'
