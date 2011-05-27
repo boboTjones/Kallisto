@@ -1,16 +1,7 @@
 --- 
 /var/log: 
-- alf.log
-- appfirewall.log
-- dpd.log
-- fsck_hfs.log
 - ftp.log
-- hdiejectd.log
-- ipfw.log
-- launchd-shutdown.log
 - mail.log
-- mb.log
-- ppp.log
 /Library/Logs/DirectoryService: 
 - DirectoryService.error.log
 - DirectoryService.server.log
