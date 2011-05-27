@@ -27,7 +27,7 @@ grammar LogLine
     end
     
     rule process_name
-      (application_identifier? daemon? pid)* <Process>
+      (application_identifier? daemon pid?)* <Process>
     end
     
     rule application_identifier
@@ -39,7 +39,7 @@ grammar LogLine
     end
 
     rule daemon
-      word [\-\/]? word?
+      word [\-\/]? word? colon?
     end
     
     rule pid
