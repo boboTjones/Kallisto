@@ -1,7 +1,8 @@
 = This is Kallisto.
 
 What does it do? Right now, it listens to syslog(1) under OS X and allows you to view
-the log information in a web UI. 
+the log information in a web UI. Or it tails a plain old log file and allows you to
+view the log information in a web UI in both OS X and Ubuntu.
 
 And that's about it. Kallisto has a long way to go before it's really usable. But you
 are welcome to play with it, should you be so inclined.
