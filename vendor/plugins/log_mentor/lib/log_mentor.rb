@@ -22,7 +22,6 @@ class LogMentor
     @base_os = os
     @logpaths = ["/var/log"]
     @logfiles = get_logfiles
-    @logfiles["syslog"] = "syslog" if @base_os == "Darwin"
     @lines = []
   end
   

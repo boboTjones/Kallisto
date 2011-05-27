@@ -2,8 +2,6 @@
 
 .nav
   %ul
-    %li.syslog
-      %a{:href => "/logs/show/syslog"} syslog
     - @lm.logfiles["/var/log"].each do |logfile|
       - fn = logfile.gsub(".","_")
       %li{:class => "#{fn}"}
