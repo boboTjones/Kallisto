@@ -30,7 +30,7 @@ class CalendarController < ApplicationController
       cal[i+1] = [y]
       y += 1
     end
-    return cal#.to_json
+    return cal.to_json
   end
   
   def mock_data(month=Time.now.month)
