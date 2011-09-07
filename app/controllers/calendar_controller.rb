@@ -7,10 +7,12 @@ Dispay events in a calendar style view
 class CalendarController < ApplicationController
   def index
     @days = Date::DAYNAMES
+    @months = Date::MONTHNAMES.select {|x| x if !x.nil?}
+    @current = Time.now.strftime("%B")
   end
   
   def dow
-    now = Chronic.parse(params[:month]) 
+    now = Chronic.parse(params[:month])
     now ||= Time.now
     render :json => endless_numbered_days(now.year,now.month)
   end
@@ -26,11 +28,11 @@ class CalendarController < ApplicationController
     x = Date.new(year,month,-1).day
     y = Date.new(year,month,1).wday
     cal = {}
-    x.times do |i|
-      cal[i+1] = [y]
+    1.upto(x) do |i|
+      cal[i] = [y]
       y += 1
     end
-    return cal.to_json
+    return cal#.to_json
   end
   
   def mock_data(month=Time.now.month)

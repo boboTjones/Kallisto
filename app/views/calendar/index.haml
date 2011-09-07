@@ -1,4 +1,17 @@
-
+%script light_up_calendar()
+.span-18.last
+  %h1.monthname
+    = @current
+  
+.span-18.last
+  .span-12.last
+    %select{:id => "montharoo"}
+      %option
+        Jump to..
+      - @months.each do |month|
+        %option{:value => month}
+          = month
+  
 %table(cellspacing="5" cellpadding="5" id="calendar")
   %thead
     %tr    

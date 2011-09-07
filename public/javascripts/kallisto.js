@@ -3,13 +3,24 @@ $(document).ready(function() {
     var activeTab = $('#nav').attr('class');
     $('li.' + activeTab).addClass('active');
 
-    $.getJSON('calendar/dow', function(data) {
-      for ( x in data ) {
-        var dow = x;
-        var loc = data[x];
-        $("td:eq(" + loc + ")").find("label").append(dow);
-      }
-      });
-    
 
+    
+    $('#montharoo').change(function(){
+      var month = $(this).val();
+      light_up_calendar(month);
+    });
 });
+
+function light_up_calendar(month) {
+  if(undefined != month)
+    $(".monthname").empty();
+    $(".monthname").append(month);
+  $("td").find("label").empty();
+  $.getJSON('calendar/dow?month=' + month, function(data) {
+    for ( x in data ) {
+      var dow = x;
+      var loc = data[x];
+      $("td:eq(" + loc + ")").find("label").append(dow);
+    }
+  });
+}

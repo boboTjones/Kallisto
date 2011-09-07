@@ -136,3 +136,9 @@ td {
   position: relative;
   top: -9px;
 }
+
+/* line 98, ../../app/stylesheets/kallisto.sass */
+.monthname {
+  font: 20px arial, sans-serif;
+  color: #6499b6;
+}
