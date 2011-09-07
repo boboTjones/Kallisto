@@ -1,0 +1,13 @@
+
+%table(cellspacing="5" cellpadding="5" id="calendar")
+  %thead
+    %tr    
+      - @days.each do |day|
+        %th.span-4
+          =day
+  %tbody
+    - 5.times do |week|
+      %tr
+        - 7.times do |day|
+          %td{:class => "#{week},#{day}"}
+            %label(class="dow")

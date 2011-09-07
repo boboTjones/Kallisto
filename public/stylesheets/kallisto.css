@@ -107,3 +107,32 @@ input[type='submit']:hover {
 .logline:hover {
   background-color: white;
 }
+
+/* line 77, ../../app/stylesheets/kallisto.sass */
+table, th, td {
+  border: 1pt solid #6499b6;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* line 83, ../../app/stylesheets/kallisto.sass */
+th {
+  color: #6499b6;
+  height: 30px;
+  text-align: center;
+}
+
+/* line 88, ../../app/stylesheets/kallisto.sass */
+td {
+  height: 30px;
+  text-align: left;
+}
+
+/* line 92, ../../app/stylesheets/kallisto.sass */
+.dow {
+  font: 10px arial, sans-serif;
+  margin: 2px;
+  position: relative;
+  top: -9px;
+}
